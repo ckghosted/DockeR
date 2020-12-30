@@ -44,6 +44,7 @@ RUN pip install requests
 RUN pip install pyyaml
 RUN pip install vtk
 RUN pip install mayavi
+RUN pip install nibabel
 
 # For Tensorboard
 RUN pip install tensorflow==2.1.0

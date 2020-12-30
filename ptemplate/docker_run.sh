@@ -3,12 +3,12 @@
 set -e
 
 # Volumes
-VOLUMES="-v=/home/$USER/.ssh/:/home/user/.ssh/
-         -v=/home/$USER/dataset/KITTI/:/KITTI/
-         -v=/home/$USER/Documents/:/home/user/doc/"
+VOLUMES="-v=/fast_data/:/fast_data/
+	 -v=/data/:/data/
+         -v=/home/viplab/:/home/viplab/"
 
 # Port
-PORT="-p 8701:22"
+PORT="-p 22:5523 -p 5599:5599 -p 6006:6006"
 
 # GPU
 GPU="--gpus all"
