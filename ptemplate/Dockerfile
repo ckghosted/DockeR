@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-devel
+FROM pytorch/pytorch:1.7.0-cuda11.0-cudnn8-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -45,14 +45,15 @@ RUN pip install pyyaml
 RUN pip install vtk
 RUN pip install mayavi
 RUN pip install nibabel
+RUN pip install medpy
 
 # For Tensorboard
-RUN pip install tensorflow==2.1.0
+RUN pip install tensorboard
 RUN pip install tensorboardX
-RUN apt-get install -y --no-install-recommends \
-    libnvinfer6=6.0.1-1+cuda10.1 \
-    libnvinfer-dev=6.0.1-1+cuda10.1 \
-    libnvinfer-plugin6=6.0.1-1+cuda10.1
+#RUN apt-get install -y --no-install-recommends \
+#    libnvinfer6=6.0.1-1+cuda10.1 \
+#    libnvinfer-dev=6.0.1-1+cuda10.1 \
+#    libnvinfer-plugin6=6.0.1-1+cuda10.1
 
 # KITTI evaluation
 RUN apt-get install -y gnuplot ghostscript texlive-extra-utils
