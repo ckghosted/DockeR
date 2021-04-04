@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.7.0-cuda11.0-cudnn8-runtime
+FROM pytorch/pytorch:1.8.1-cuda11.1-cudnn8-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -46,6 +46,7 @@ RUN pip install vtk
 RUN pip install mayavi
 RUN pip install nibabel
 RUN pip install medpy
+RUN pip install termcolor
 
 # For Tensorboard
 RUN pip install tensorboard
