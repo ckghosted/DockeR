@@ -8,7 +8,7 @@ VOLUMES="-v=/fast_data/:/fast_data/
          -v=/home/viplab/:/home/viplab/"
 
 # Port
-PORT="-p 22:5523 -p 5599:5599 -p 6006:6006"
+PORT="-p 22:5523 -p 5599:5599 -p 6006:6006 -p 12345:12345"
 
 # GPU
 GPU="--gpus all"
