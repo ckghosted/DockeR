@@ -47,6 +47,7 @@ RUN pip install mayavi
 RUN pip install nibabel
 RUN pip install medpy
 RUN pip install termcolor
+RUN pip install ml_collections
 
 # For Tensorboard
 RUN pip install tensorboard
