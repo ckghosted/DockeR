@@ -23,7 +23,7 @@ OTHERS="--shm-size 120G"
 NAME="--name ptemplate"
 
 # Image
-IMAGE="ptemplate"
+IMAGE="ptemplate1"
 
 # Command
 # xhost +

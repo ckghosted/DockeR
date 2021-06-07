@@ -3,6 +3,6 @@
 set -e
 
 # Image
-IMAGE="ptemplate"
+IMAGE="ptemplate1"
 
 docker build  -t $IMAGE .

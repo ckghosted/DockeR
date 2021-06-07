@@ -48,6 +48,7 @@ RUN pip install nibabel
 RUN pip install medpy
 RUN pip install termcolor
 RUN pip install ml_collections
+RUN pip install git+https://github.com/lucasb-eyer/pydensecrf.git
 
 # For Tensorboard
 RUN pip install tensorboard
