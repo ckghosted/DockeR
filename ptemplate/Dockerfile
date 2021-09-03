@@ -49,6 +49,7 @@ RUN pip install medpy
 RUN pip install termcolor
 RUN pip install ml_collections
 RUN pip install git+https://github.com/lucasb-eyer/pydensecrf.git
+RUN pip install pandas
 
 # For Tensorboard
 RUN pip install tensorboard
