@@ -3,9 +3,7 @@
 set -e
 
 # Volumes
-VOLUMES="-v=/fast_data/:/fast_data/
-	 -v=/data/:/data/
-         -v=/home/viplab/:/home/viplab/"
+VOLUMES="-v=/home/chen.toby/:/home/chen.toby/"
 
 # Port
 PORT="-p 22:5523 -p 5599:5599 -p 6006:6006 -p 12345:12345"
@@ -20,10 +18,13 @@ DIS="-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix"
 OTHERS="--shm-size 120G"
 
 # Name
-NAME="--name ptemplate"
+NAME="--name toby_pytorch"
 
 # Image
 IMAGE="ptemplate1"
+
+# User
+USER="--user 1001"
 
 # Command
 # xhost +

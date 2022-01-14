@@ -16,7 +16,8 @@ RUN apt-get install -y \
     tmux \
     htop \
     nano \
-    vim
+    vim \
+    p7zip-full
 
 # ####################################################################################
 # Build tools
