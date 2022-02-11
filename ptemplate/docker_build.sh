@@ -3,6 +3,6 @@
 set -e
 
 # Image
-IMAGE="ptemplate1"
+IMAGE="toby-pytorch"
 
 docker build  -t $IMAGE .
