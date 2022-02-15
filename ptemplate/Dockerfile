@@ -20,9 +20,9 @@ RUN apt-get update -qq && apt-get install -y \
 
 # ####################################################################################
 # Build tools
-RUN apt-get install -y cmake
-RUN apt-get install -y libgtk2.0-dev
-RUN apt-get install -y libboost-all-dev
+# RUN apt-get install -y cmake
+# RUN apt-get install -y libgtk2.0-dev
+# RUN apt-get install -y libboost-all-dev
 
 # Notebook
 RUN conda install -y notebook
@@ -39,13 +39,13 @@ RUN pip install opencv-python
 RUN pip install scikit-image
 RUN pip install scikit-learn
 RUN pip install matplotlib
-RUN pip install requests
+# RUN pip install requests
 RUN pip install pyyaml
-RUN pip install nibabel
-RUN pip install medpy
-RUN pip install termcolor
-RUN pip install ml_collections
-RUN pip install git+https://github.com/lucasb-eyer/pydensecrf.git
+# RUN pip install nibabel
+# RUN pip install medpy
+# RUN pip install termcolor
+# RUN pip install ml_collections
+# RUN pip install git+https://github.com/lucasb-eyer/pydensecrf.git
 RUN pip install pandas
 
 # For Tensorboard

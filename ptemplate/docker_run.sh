@@ -3,10 +3,10 @@
 set -e
 
 # Volumes
-VOLUMES="-v=/home/chen.toby/:/home/chen.toby/"
+VOLUMES="-v=/home/chen.toby/nodule_detection:/home/chen.toby/nodule_detection -v=/workspace/toby:workspace/toby"
 
 # Port
-PORT="-p 22:5523 -p 5599:5599 -p 6006:6006 -p 12345:12345"
+PORT="-p 22:5523 -p 5599:5599 -p 6006:6006"
 
 # GPU
 GPU="--gpus all"
@@ -15,16 +15,16 @@ GPU="--gpus all"
 DIS="-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix"
 
 # Other args
-OTHERS="--shm-size 120G"
+OTHERS="--shm-size 32G"
 
 # Name
-NAME="--name toby_pytorch"
+NAME="--name toby-pytorch"
 
 # Image
-IMAGE="ptemplate1"
+IMAGE="toby-pytorch"
 
 # User
-USER="--user 1001"
+USER="--user 1022"
 
 # Command
 # xhost +
