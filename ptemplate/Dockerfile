@@ -2,8 +2,7 @@ FROM pytorch/pytorch:1.8.1-cuda11.1-cudnn8-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -qq
-RUN apt-get install -y \
+RUN apt-get update -qq && apt-get install -y \
     git \
     zip \
     sudo \
@@ -40,11 +39,8 @@ RUN pip install opencv-python
 RUN pip install scikit-image
 RUN pip install scikit-learn
 RUN pip install matplotlib
-RUN pip install easydict
 RUN pip install requests
 RUN pip install pyyaml
-RUN pip install vtk
-RUN pip install mayavi
 RUN pip install nibabel
 RUN pip install medpy
 RUN pip install termcolor
@@ -55,19 +51,13 @@ RUN pip install pandas
 # For Tensorboard
 RUN pip install tensorboard
 RUN pip install tensorboardX
-#RUN apt-get install -y --no-install-recommends \
-#    libnvinfer6=6.0.1-1+cuda10.1 \
-#    libnvinfer-dev=6.0.1-1+cuda10.1 \
-#    libnvinfer-plugin6=6.0.1-1+cuda10.1
 
-# KITTI evaluation
-RUN apt-get install -y gnuplot ghostscript texlive-extra-utils
 # ####################################################################################
 # Sometimes may use root.
 RUN /opt/conda/condabin/conda init
 
 # New user
-RUN adduser --disabled-password --gecos '' --uid 1000 user
+RUN adduser --disabled-password --gecos '' --uid 1022 user
 RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-user
 USER user
 WORKDIR /home/user/
