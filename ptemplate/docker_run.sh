@@ -3,7 +3,7 @@
 set -e
 
 # Volumes
-VOLUMES="-v=/home/chen.toby/nodule_detection:/home/chen.toby/nodule_detection -v=/workspace/toby:workspace/toby"
+VOLUMES="-v=/home/chen.toby/nodule_detection:/home/chen.toby/nodule_detection -v=/workspace/toby:/workspace/toby"
 
 # Port
 PORT="-p 22:5523 -p 5599:5599 -p 6006:16006"
