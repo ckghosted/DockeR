@@ -47,6 +47,7 @@ RUN pip install pyyaml
 # RUN pip install ml_collections
 # RUN pip install git+https://github.com/lucasb-eyer/pydensecrf.git
 RUN pip install pandas
+RUN pip install SimpleITK
 
 # For Tensorboard
 RUN pip install tensorboard
