@@ -11,6 +11,9 @@ PORT="-p 22:5523 -p 5599:5599 -p 6006:16006"
 # GPU
 GPU="--gpus all"
 
+# CPU
+CPU="--cpus 8"
+
 # Display
 DIS="-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix"
 
