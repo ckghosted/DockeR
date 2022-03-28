@@ -36,6 +36,7 @@ RUN sudo apt-get install -y \
 RUN pip install opencv-python
 
 # Needs
+RUN pip install ipywidgets
 RUN pip install scikit-image
 RUN pip install scikit-learn
 RUN pip install matplotlib
